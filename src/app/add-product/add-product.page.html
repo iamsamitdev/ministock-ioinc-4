@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-button slot="start" color="light" class="ion-margin-start" [routerLink]="['/tabs/tabs/tab-home']">
+      <ion-icon name="arrow-back" slot="icon-only"></ion-icon></ion-button>
+    <ion-title>Add Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      
+      <form [formGroup]="productForm" (ngSubmit)="onFormSubmit(productForm.value)">
+
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+
+          <ion-item>
+            <ion-label position="stacked">Product name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" formControlName="name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Product price <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" formControlName="price"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Product description <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" formControlName="description"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Product Image URL <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" formControlName="imgurl"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Product Category <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" formControlName="category"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Product Date Add <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" formControlName="date"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Product Time Add <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" formControlName="time"></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <div class="ion-padding">
+          <ion-button expand="block" type="submit" class="ion-no-margin">Create Product</ion-button>
+        </div>
+      </form>
+
+</ion-content>
